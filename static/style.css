@@ -1,0 +1,45 @@
+#main{
+	width: 308px;
+    height: 308px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 40px;
+}
+.row{
+	display: flex;
+    flex-direction: row;
+}
+.row div{
+	border: 1px solid grey;
+    width: 75px;
+    height: 75px;
+}
+h1{
+	font-size: 50px;
+    font-family: sans-serif;
+    width: 113px;
+    margin: auto;
+}
+#extra{
+	display: flex;
+    width: 200px;
+    justify-content: space-between;
+    margin: auto;
+}
+#extra div{
+	display: flex;
+    flex-direction: column;
+    font-size: 17px;
+}
+#button{
+	margin-top: 15px;
+}
+#score{
+	margin: auto;
+    color: red;
+}
+#extra p{
+	margin-bottom: 2px;
+}
