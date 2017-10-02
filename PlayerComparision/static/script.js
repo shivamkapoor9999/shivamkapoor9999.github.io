@@ -30,7 +30,7 @@ function getData()
 	console.log("Hello How are you");
 	$.ajax({
 		type: 'GET',
-		url: 'http://cricapi.com/api/playerStats',
+		url: 'https://cricapi.com/api/playerStats',
 		data: {
 			'apikey': 'jvFOQ5v1VfP8IuSIejfXgNWzAzw2',
 			'pid': givepid($("#select1").val())
@@ -46,7 +46,7 @@ function getData()
 
 	$.ajax({
 		type: 'GET',
-		url: 'http://cricapi.com/api/playerStats',
+		url: 'https://cricapi.com/api/playerStats',
 		data: {
 			'apikey': 'jvFOQ5v1VfP8IuSIejfXgNWzAzw2',
 			'pid': givepid($("#select2").val())
