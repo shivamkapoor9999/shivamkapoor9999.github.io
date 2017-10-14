@@ -1,7 +1,11 @@
 #main{
 	width: 308px;
     height: 308px;
+<<<<<<< HEAD
+   /* background-color: white;*/
+=======
     background-color: white;
+>>>>>>> 27d50c759f1355ee0b89e2791edb5ed490c2619b
     display: flex;
     flex-wrap: wrap;
     margin: auto;
@@ -40,6 +44,116 @@ h1{
 	margin: auto;
     color: red;
 }
+<<<<<<< HEAD
+#high-score{
+    margin: auto;
+    color: red;
+}
 #extra p{
 	margin-bottom: 2px;
+}
+.cell0{
+    background-color: #c6bcbb;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 70px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.cell2{
+    background-color: #ebe0c3;
+    /* background-image: url(static/img/2.png); */
+    color: grey;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 70px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.cell4{
+    background-color: #ffe4cd;
+    color: grey;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 70px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.cell8{
+    background-color: #f5a56e;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 70px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.cell16{
+    background-color: #f78855;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 70px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.cell32{
+    background-color: #f76a55;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 70px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.cell64{
+    background-color: #ff3e21;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 70px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.cell128{
+    background-color: #f5e967;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 70px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.cell512{
+        background-color: #f5e63a;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 70px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.cell1024{
+    background-color: #fe83a6;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 70px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.cell2048{
+    background-color: #ffeb10;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 70px;
+    text-align: center;
+    font-family: sans-serif;
+=======
+#extra p{
+	margin-bottom: 2px;
+>>>>>>> 27d50c759f1355ee0b89e2791edb5ed490c2619b
 }

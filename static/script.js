@@ -5,6 +5,9 @@ var board = [
   [0, 0, 0, 0],
 ];
 var score=0;
+
+var highScore=localStorage.highScore;
+
 // var value = Math.random() < 0.9 ? 2 : 4;
 // Math.random() * (max - min) + min;
 function findVacancy()
@@ -227,6 +230,10 @@ function clearDisplayBoard()
 		for(let j=0;j<board.length;j++)
 		{
 			var mydiv=document.querySelector("#div"+i+j);
+
+			mydiv.innerHTML="";
+			mydiv.className="";
+
 				mydiv.style.backgroundImage = "";
 		}
 	}
@@ -242,21 +249,51 @@ function display()
 			if(board[i][j]==0)
 			{
 				var mydiv=document.querySelector("#div"+i+j);
+
+				
+				mydiv.className +="cell0";
+				// mydiv.style.backgroundImage = "url('static/img/blank.jpg')";
+
 				mydiv.style.backgroundImage = "url('static/img/blank.jpg')";
+
 			}
 			else if(board[i][j]==2)
 			{
 				var mydiv=document.querySelector("#div"+i+j);
+
+				mydiv.innerHTML="2";
+				mydiv.className +="cell2";
+				 //mydiv.style.backgroundImage = "url('static/img/2.png')";
+
 				mydiv.style.backgroundImage = "url('static/img/2.png')";
+
 			}
 			else if(board[i][j]==4)
 			{
 				var mydiv=document.querySelector("#div"+i+j);
+
+				mydiv.innerHTML="4";
+				mydiv.className +="cell4";
+
+				//mydiv.style.backgroundImage = "url('static/img/4.png')";
+
 				mydiv.style.backgroundImage = "url('static/img/4.png')";
+
 			}
 			else if(board[i][j]==8)
 			{
 				var mydiv=document.querySelector("#div"+i+j);
+ 
+				mydiv.innerHTML="8";
+				mydiv.className +="cell8";
+				//mydiv.style.backgroundImage = "url('static/img/8.png')";
+			}
+			else if(board[i][j]==16)
+			{
+				var mydiv=document.querySelector("#div"+i+j);
+				mydiv.innerHTML="16";
+				mydiv.className +="cell16";
+				//mydiv.style.backgroundImage = "url('static/img/16.png')";
 				mydiv.style.backgroundImage = "url('static/img/8.png')";
 			}
 			else if(board[i][j]==16)
@@ -267,37 +304,64 @@ function display()
 			else if(board[i][j]==32)
 			{
 				var mydiv=document.querySelector("#div"+i+j);
+				mydiv.innerHTML="32";
+				mydiv.className +="cell32";
+				//mydiv.style.backgroundImage = "url('static/img/32.png')";
+
 				mydiv.style.backgroundImage = "url('static/img/32.png')";
 			}
 			else if(board[i][j]==64)
 			{
 				var mydiv=document.querySelector("#div"+i+j);
+				mydiv.innerHTML="64";
+				mydiv.className +="cell64";
+				//mydiv.style.backgroundImage = "url('static/img/64.png')";
+
 				mydiv.style.backgroundImage = "url('static/img/64.png')";
 			}
 			else if(board[i][j]==128)
 			{
 				var mydiv=document.querySelector("#div"+i+j);
+				mydiv.innerHTML="128";
+				mydiv.className +="cell128";
+				//mydiv.style.backgroundImage = "url('static/img/128.png')";
+
 				mydiv.style.backgroundImage = "url('static/img/128.png')";
 			}
 			else if(board[i][j]==256)
 			{
 				var mydiv=document.querySelector("#div"+i+j);
+				mydiv.innerHTML="256";
+				mydiv.className +="cell256";
+				//mydiv.style.backgroundImage = "url('static/img/256.png')";
+
 				mydiv.style.backgroundImage = "url('static/img/256.png')";
 			}
 			else if(board[i][j]==512)
 			{
 				var mydiv=document.querySelector("#div"+i+j);
+				mydiv.innerHTML="512";
+				mydiv.className +="cell512";
+				//mydiv.style.backgroundImage = "url('static/img/512.png')";
 				mydiv.style.backgroundImage = "url('static/img/512.png')";
 			}
 			else if(board[i][j]==1024)
 			{
 				var mydiv=document.querySelector("#div"+i+j);
+				mydiv.innerHTML="1024";
+				mydiv.className +="cell1024";
+				//mydiv.style.backgroundImage = "url('static/img/1024.png')";
 				mydiv.style.backgroundImage = "url('static/img/1024.png')";
 			}
 			else if(board[i][j]==2048)
 			{
 				var mydiv=document.querySelector("#div"+i+j);
+				mydiv.innerHTML="2048";
+				mydiv.className +="cell2048";
+				//mydiv.style.backgroundImage = "url('static/img/2048.png')";
+
 				mydiv.style.backgroundImage = "url('static/img/2048.png')";
+
 			}
 		}
 	}
@@ -327,6 +391,18 @@ function sleep(milliseconds) {
   }
 }
 
+
+function highScoreIs(currentScore)
+{
+	if(currentScore>highScore)
+	{
+		highScore=currentScore;
+		localStorage.highScore=highScore;
+	}
+}
+
+
+
 function afterHitKey()
 {
 	document.onkeydown = checkKey;
@@ -337,7 +413,13 @@ function afterHitKey()
 		 sleep(100);
 		 clearDisplayBoard();
 	    display();
+
+	    highScoreIs(score);
 	    document.querySelector("#score").innerHTML=score;
+	    document.querySelector("#high-score").innerHTML=highScore;
+
+	    document.querySelector("#score").innerHTML=score;
+
 	}
 
    function checkKey(e) {
@@ -421,10 +503,12 @@ function checkEnd()
 
 function main()
 {
+
 	place2or4();
 	place2or4();
 	display();
 	document.querySelector("#score").innerHTML=score;
+	document.querySelector("#high-score").innerHTML=highScore;
 	afterHitKey();
 }
 
